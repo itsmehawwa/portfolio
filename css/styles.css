@@ -68,9 +68,11 @@ code {
 
 .logo {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2.8vw, 1.5rem);
   font-weight: 600;
   letter-spacing: 0.02em;
+  line-height: 1.2;
+  max-width: min(14rem, 55vw);
 }
 
 .nav {
@@ -361,9 +363,17 @@ code {
 .personal-details h2 {
   margin: 0 0 2rem;
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-size: clamp(1.35rem, 4.5vw, 3.25rem);
   font-weight: 400;
   line-height: 1.15;
+  text-align: left;
+  hyphens: none;
+}
+
+@media (min-width: 520px) {
+  .personal-details h2 {
+    white-space: nowrap;
+  }
 }
 
 .personal-block {

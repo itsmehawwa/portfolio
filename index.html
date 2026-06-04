@@ -2,7 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        if (location.pathname.startsWith("/portfolio")) {
+          var base = document.createElement("base");
+          base.href = "/portfolio/";
+          document.head.appendChild(base);
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://itsmehawwa.github.io/portfolio/" />
     <meta
       name="description"
       content="Portfolio of Hawwa 'bint Shamsuddeen — artist and designer. Paintings, illustration, and visual design."
@@ -70,7 +80,7 @@
         </div>
         <div class="personal-details">
           <p class="personal-label">Artist & Designer</p>
-          <h2 id="personal-name">Hawwa 'bint Shamsuddeen</h2>
+          <h2 id="personal-name">Hawwa&nbsp;'bint&nbsp;Shamsuddeen</h2>
 
           <div class="personal-block">
             <h3 id="about-heading">About</h3>
