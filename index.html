@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Maya Chen — artist and designer. Paintings, illustration, and visual design."
+    />
+    <title>Maya Chen — Artist & Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#">Maya Chen</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-instagram"
+        >
+          Instagram
+        </a>
+      </nav>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open menu"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <nav id="mobile-nav" class="mobile-nav" hidden aria-label="Mobile">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+        >Instagram</a
+      >
+    </nav>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-heading">
+        <p class="hero-label">Artist & Designer</p>
+        <h1 id="hero-heading">Color, form,<br />and quiet stories.</h1>
+        <p class="hero-text">
+          Mixed media, illustration, and brand visuals — based in Brooklyn.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">View work</a>
+          <a
+            class="btn btn-outline"
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+            Follow on Instagram
+          </a>
+        </div>
+      </section>
+
+      <section id="work" class="gallery-section" aria-labelledby="work-heading">
+        <div class="section-header">
+          <h2 id="work-heading">Selected work</h2>
+          <p>
+            Replace these images with your own — add files to
+            <code>images/</code> and update the paths in
+            <code>index.html</code>.
+          </p>
+        </div>
+
+        <div class="gallery">
+          <article class="gallery-item gallery-item--tall">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Morning light"
+              data-medium="Oil on canvas, 2025"
+            >
+              <img
+                src="images/work-01.jpg"
+                alt="Abstract painting with warm ochre and soft blue tones"
+                width="600"
+                height="800"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Morning light</h3>
+              <span>Oil on canvas</span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Botanical study"
+              data-medium="Ink & watercolor, 2024"
+            >
+              <img
+                src="images/work-02.jpg"
+                alt="Delicate ink illustration of leaves and stems"
+                width="600"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Botanical study</h3>
+              <span>Ink & watercolor</span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Studio identity"
+              data-medium="Brand design, 2024"
+            >
+              <img
+                src="images/work-03.jpg"
+                alt="Minimal brand mockup with serif typography on cream paper"
+                width="600"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Studio identity</h3>
+              <span>Brand design</span>
+            </div>
+          </article>
+
+          <article class="gallery-item gallery-item--wide">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Coastal series"
+              data-medium="Acrylic, 2025"
+            >
+              <img
+                src="images/work-04.jpg"
+                alt="Wide landscape painting of sea and horizon in muted greens"
+                width="900"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Coastal series</h3>
+              <span>Acrylic</span>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Editorial spread"
+              data-medium="Digital collage, 2024"
+            >
+              <img
+                src="images/work-05.jpg"
+                alt="Editorial collage with figure and geometric shapes"
+                width="600"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Editorial spread</h3>
+              <span>Digital collage</span>
+            </div>
+          </article>
+
+          <article class="gallery-item gallery-item--tall">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Ceramic forms"
+              data-medium="Photography, 2023"
+            >
+              <img
+                src="images/work-06.jpg"
+                alt="Still life photograph of handmade ceramic vessels"
+                width="600"
+                height="800"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Ceramic forms</h3>
+              <span>Photography</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="about" aria-labelledby="about-heading">
+        <div class="about-image">
+          <img
+            src="images/portrait.jpg"
+            alt="Portrait of Maya Chen in her studio"
+            width="500"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+        <div class="about-content">
+          <h2 id="about-heading">About</h2>
+          <p>
+            I’m Maya — I work across painting, illustration, and design for
+            small brands and independent publications. My practice centers on
+            texture, restraint, and the space between figuration and abstraction.
+          </p>
+          <p>
+            Commissions and collaborations are welcome. The fastest way to reach
+            me is through Instagram, where I share works in progress and studio
+            notes.
+          </p>
+          <a
+            class="instagram-link"
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="icon"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+            @yourhandle on Instagram
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Maya Chen. All rights reserved.</p>
+      <a
+        href="https://instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+      >
+        <svg
+          class="icon"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+        </svg>
+      </a>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+      <button class="lightbox-close" type="button" aria-label="Close">
+        ×
+      </button>
+      <figure class="lightbox-figure">
+        <img src="" alt="" id="lightbox-img" />
+        <figcaption>
+          <h3 id="lightbox-title"></h3>
+          <p id="lightbox-medium"></p>
+        </figcaption>
+      </figure>
+    </dialog>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
