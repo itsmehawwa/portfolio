@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        if (location.pathname.startsWith("/portfolio")) {
+          var base = document.createElement("base");
+          base.href = "/portfolio/";
+          document.head.appendChild(base);
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blogs and writings by Hawwa 'bint Shamsuddeen — essays, studio notes, and creative reflections."
+    />
+    <title>Blogs & Writings — Hawwa 'bint Shamsuddeen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo logo--static" href="index.html">Hawwa&nbsp;'bint&nbsp;Shamsuddeen</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#work">Work</a>
+      </nav>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open menu"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <nav id="mobile-nav" class="mobile-nav" hidden aria-label="Mobile">
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#work">Work</a>
+    </nav>
+
+    <main class="category-page">
+      <div class="category-page-inner">
+        <a class="back-link" href="index.html#work">← Back to My work</a>
+
+        <header class="category-header">
+          <h1>Blogs &amp; writings</h1>
+          <p>
+            Essays, studio notes, and reflections on art, design, and the creative
+            process.
+          </p>
+        </header>
+
+        <div class="writing-gallery">
+          <a class="writing-project" href="#">
+            <span class="writing-project-thumb">
+              <img
+                src="images/blogs-writings.jpg"
+                alt=""
+                width="400"
+                height="225"
+                loading="lazy"
+              />
+            </span>
+            <span class="writing-project-meta">Essay · 2025</span>
+            <h2>On color, memory, and making</h2>
+            <p>
+              Reflections on how everyday palettes find their way into canvas and
+              sketchbook.
+            </p>
+          </a>
+
+          <a class="writing-project" href="#">
+            <span class="writing-project-thumb">
+              <img
+                src="images/paintings-sketches.jpg"
+                alt=""
+                width="400"
+                height="225"
+                loading="lazy"
+              />
+            </span>
+            <span class="writing-project-meta">Blog · 2024</span>
+            <h2>Studio notes from a rainy week</h2>
+            <p>
+              Process diary — drafts, false starts, and the pieces that finally
+              clicked.
+            </p>
+          </a>
+
+          <a class="writing-project" href="#">
+            <span class="writing-project-thumb">
+              <img
+                src="images/digital-art.jpg"
+                alt=""
+                width="400"
+                height="225"
+                loading="lazy"
+              />
+            </span>
+            <span class="writing-project-meta">Writing · 2024</span>
+            <h2>Designing with restraint</h2>
+            <p>
+              Why less can carry more weight in visual work and personal projects.
+            </p>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Hawwa 'bint Shamsuddeen. All rights reserved.</p>
+      <a
+        href="https://www.instagram.com/hawwabintshamsuddeen_/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+      >
+        <svg
+          class="icon"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+        </svg>
+      </a>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

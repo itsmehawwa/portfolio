@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        if (location.pathname.startsWith("/portfolio")) {
+          var base = document.createElement("base");
+          base.href = "/portfolio/";
+          document.head.appendChild(base);
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Digital art by Hawwa 'bint Shamsuddeen — illustration, collage, and brand visuals."
+    />
+    <title>Digital Art — Hawwa 'bint Shamsuddeen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo logo--static" href="index.html">Hawwa&nbsp;'bint&nbsp;Shamsuddeen</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#work">Work</a>
+      </nav>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open menu"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <nav id="mobile-nav" class="mobile-nav" hidden aria-label="Mobile">
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#work">Work</a>
+    </nav>
+
+    <main class="category-page">
+      <div class="category-page-inner">
+        <a class="back-link" href="index.html#work">← Back to My work</a>
+
+        <header class="category-header">
+          <h1>Digital art</h1>
+          <p>
+            Illustration, lettering, and design work — from abstract pieces to
+            playful scenes created on screen.
+          </p>
+        </header>
+
+        <div class="project-gallery">
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Rose in a bottle"
+              data-medium="Digital sketch, 2024"
+            >
+              <img
+                src="images/digital-art/rose-in-bottle.png"
+                alt="Digital pencil sketch of a rose in a square glass bottle on a muted green background"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Rose in a bottle</h3>
+              <span>Digital sketch, 2024</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Fearless"
+              data-medium="Digital illustration"
+            >
+              <img
+                src="images/digital-art/fearless.png"
+                alt="Digital artwork with the word Fearless in fiery script above glowing flames on a black background"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Fearless</h3>
+              <span>Digital illustration</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Paper-cut waves"
+              data-medium="Digital illustration"
+            >
+              <img
+                src="images/digital-art/paper-cut-waves.png"
+                alt="Abstract layered paper-cut seascape with wavy shapes in tan and shades of blue"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Paper-cut waves</h3>
+              <span>Digital illustration</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Candlelight"
+              data-medium="Digital painting, 2023"
+            >
+              <img
+                src="images/digital-art/candle.png"
+                alt="Digital painting of a glowing orange candle with a single wax drip against a black background"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Candlelight</h3>
+              <span>Digital painting, 2023</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Blue eye study"
+              data-medium="Digital art, 2023"
+            >
+              <img
+                src="images/digital-art/blue-eye.png"
+                alt="Vibrant blue eye with black pupil and white highlight floating over a soft shadow on white"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Blue eye study</h3>
+              <span>Digital art, 2023</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Life is a game"
+              data-medium="Digital illustration"
+            >
+              <img
+                src="images/digital-art/game-room.png"
+                alt="Isometric neon-lit bedroom with Game Over on the TV and life is a game on the wall"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Life is a game</h3>
+              <span>Digital illustration</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Rippling water"
+              data-medium="Digital abstract"
+            >
+              <img
+                src="images/digital-art/water-ripples.png"
+                alt="Abstract digital artwork of bright cyan and turquoise water ripples"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Rippling water</h3>
+              <span>Digital abstract</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Iridescent bubbles"
+              data-medium="Digital painting"
+            >
+              <img
+                src="images/digital-art/bubbles.png"
+                alt="Four glowing bubbles in pink, cyan, and green against a black background"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Iridescent bubbles</h3>
+              <span>Digital painting</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Kingdom sun"
+              data-medium="Digital illustration, 2023"
+            >
+              <img
+                src="images/digital-art/tangled-sun.png"
+                alt="Stylized yellow sun with wavy rays surrounded by purple leaves and swirls on a deep purple background"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Kingdom sun</h3>
+              <span>Digital illustration, 2023</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Lightning"
+              data-medium="Digital abstract, 2023"
+            >
+              <img
+                src="images/digital-art/lightning.png"
+                alt="Abstract white lightning-like fracture with a blue glow on a light blue background"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Lightning</h3>
+              <span>Digital abstract, 2023</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Circular landscape"
+              data-medium="Digital illustration"
+            >
+              <img
+                src="images/digital-art/night-scenery.png"
+                alt="Road receding toward layered purple and pink mountains under a crescent moon in a glowing circle"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Circular landscape</h3>
+              <span>Digital illustration</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Water caustics"
+              data-medium="Digital illustration"
+            >
+              <img
+                src="images/digital-art/water-pattern.png"
+                alt="Light blue water surface pattern with white highlights and blue shadows"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Water caustics</h3>
+              <span>Digital illustration</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Ordinary & beautiful"
+              data-medium="Digital lettering, 2023"
+            >
+              <img
+                src="images/digital-art/ordinary-beautiful.png"
+                alt="Hand-lettered quote: It is ordinary to love the beautiful but beautiful to love the ordinary"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Ordinary & beautiful</h3>
+              <span>Digital lettering, 2023</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Hawwa 'bint Shamsuddeen. All rights reserved.</p>
+      <a
+        href="https://www.instagram.com/hawwabintshamsuddeen_/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+      >
+        <svg
+          class="icon"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+        </svg>
+      </a>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <figure class="lightbox-figure">
+        <img src="" alt="" id="lightbox-img" />
+        <figcaption>
+          <h3 id="lightbox-title"></h3>
+          <p id="lightbox-medium"></p>
+        </figcaption>
+      </figure>
+    </dialog>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

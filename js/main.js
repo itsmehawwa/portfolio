@@ -6,7 +6,55 @@ const closeBtn = lightbox?.querySelector(".lightbox-close");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileNav = document.getElementById("mobile-nav");
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year") &&
+  (document.getElementById("year").textContent = new Date().getFullYear());
+
+const personalName = document.getElementById("personal-name");
+const logo = document.querySelector(".logo");
+
+const LOGO_INTERACTIVE_THRESHOLD = 0.05;
+
+function getLogoScrollProgress(rect) {
+  if (rect.height <= 0) return 0;
+
+  if (rect.top >= 0) return 0;
+  if (rect.bottom <= 0) return 1;
+
+  return Math.min(1, Math.max(0, -rect.top / rect.height));
+}
+
+function updateHeaderLogo() {
+  if (!personalName || !logo) return;
+
+  const rect = personalName.getBoundingClientRect();
+  const progress = getLogoScrollProgress(rect);
+
+  logo.style.setProperty("--logo-progress", String(progress));
+
+  const isInteractive = progress > LOGO_INTERACTIVE_THRESHOLD;
+  logo.setAttribute("aria-hidden", String(!isInteractive));
+  logo.tabIndex = isInteractive ? 0 : -1;
+  logo.style.pointerEvents = isInteractive ? "" : "none";
+}
+
+if (personalName && logo) {
+  let ticking = false;
+
+  const onScrollOrResize = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      updateHeaderLogo();
+      ticking = false;
+    });
+  };
+
+  updateHeaderLogo();
+  window.addEventListener("scroll", onScrollOrResize, { passive: true });
+  window.addEventListener("resize", onScrollOrResize);
+  window.addEventListener("load", updateHeaderLogo);
+  document.fonts?.ready.then(updateHeaderLogo);
+}
 
 document.querySelectorAll(".gallery-trigger").forEach((trigger) => {
   trigger.addEventListener("click", () => {

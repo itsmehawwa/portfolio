@@ -28,19 +28,13 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="logo" href="#">Hawwa 'bint Shamsuddeen</a>
+      <a class="logo" href="#about" aria-hidden="true" tabindex="-1"
+        >Hawwa&nbsp;'bint&nbsp;Shamsuddeen</a
+      >
       <nav class="nav" aria-label="Main">
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="#work">Work</a>
-        <a
-          href="https://www.instagram.com/hawwabintshamsuddeen/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="nav-instagram"
-        >
-          Instagram
-        </a>
       </nav>
       <button
         class="menu-toggle"
@@ -58,9 +52,6 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
       <a href="#work">Work</a>
-      <a href="https://www.instagram.com/hawwabintshamsuddeen/" target="_blank" rel="noopener noreferrer"
-        >Instagram</a
-      >
     </nav>
 
     <main>
@@ -119,12 +110,25 @@
               <li>
                 <a
                   class="contact-link"
-                  href="https://www.instagram.com/hawwabintshamsuddeen/"
+                  href="https://www.linkedin.com/in/hawwa-bint-shamsuddeen-a054aa353/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value"
+                    >linkedin.com/in/hawwa-bint-shamsuddeen</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  class="contact-link"
+                  href="https://www.instagram.com/hawwabintshamsuddeen_/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <span class="contact-label">Instagram</span>
-                  <span class="contact-value">@hawwabintshamsuddeen</span>
+                  <span class="contact-value">@hawwabintshamsuddeen_</span>
                 </a>
               </li>
               <li>
@@ -144,15 +148,12 @@
       </section>
 
       <section class="hero" aria-labelledby="hero-heading">
-        <h1 id="hero-heading">Color, form,<br />and quiet stories.</h1>
-        <p class="hero-text">
-          Mixed media, illustration, and brand visuals — based in Brooklyn.
-        </p>
+        <h1 id="hero-heading">&ldquo;To create is to imagine<br />what others are yet to see&rdquo;</h1>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#work">View work</a>
           <a
             class="btn btn-outline"
-            href="https://www.instagram.com/hawwabintshamsuddeen/"
+            href="https://www.instagram.com/hawwabintshamsuddeen_/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -170,147 +171,65 @@
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
             </svg>
-            Follow on Instagram
+            Follow my design page!
           </a>
         </div>
       </section>
 
-      <section id="work" class="gallery-section" aria-labelledby="work-heading">
-        <div class="section-header">
-          <h2 id="work-heading">Selected work</h2>
+      <section id="work" class="gallery-section gallery-section--polaroids" aria-labelledby="work-heading">
+        <div class="section-header section-header--compact">
+          <h2 id="work-heading">My work</h2>
           <p>
-            Replace these images with your own — add files to
-            <code>images/</code> and update the paths in
-            <code>index.html</code>.
+            A collection of things I've made, imagined, and brought to life. Click
+            below to explore my creations.
           </p>
         </div>
 
-        <div class="gallery">
-          <article class="gallery-item gallery-item--tall">
-            <button
-              class="gallery-trigger"
-              type="button"
-              data-title="Morning light"
-              data-medium="Oil on canvas, 2025"
-            >
-              <img
-                src="images/img_7029.jpg"
-                alt="Abstract painting with warm ochre and soft blue tones"
-                width="600"
-                height="800"
-                loading="lazy"
-              />
-            </button>
-            <div class="gallery-caption">
-              <h3>Morning light</h3>
-              <span>Oil on canvas</span>
+        <div class="polaroids">
+          <a class="polaroid polaroid-card" href="paintings-sketches.html" id="paintings">
+            <div class="polaroid-frame">
+              <div class="polaroid-photo">
+                <img
+                  src="images/paintings-sketches.jpg"
+                  alt="Paintbrushes, pencils, and a sketchbook with skull drawings"
+                  width="240"
+                  height="320"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </article>
+            <p class="polaroid-label">paintings | sketches</p>
+          </a>
 
-          <article class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              data-title="Botanical study"
-              data-medium="Ink & watercolor, 2024"
-            >
-              <img
-                src="images/img_7029.jpg"
-                alt="Delicate ink illustration of leaves and stems"
-                width="600"
-                height="500"
-                loading="lazy"
-              />
-            </button>
-            <div class="gallery-caption">
-              <h3>Botanical study</h3>
-              <span>Ink & watercolor</span>
+          <a class="polaroid polaroid-card" href="digital-art.html" id="digital-art">
+            <div class="polaroid-frame">
+              <div class="polaroid-photo">
+                <img
+                  src="images/digital-art.jpg"
+                  alt="Tablet showing a digital flower illustration with stylus"
+                  width="240"
+                  height="320"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </article>
+            <p class="polaroid-label">digital art</p>
+          </a>
 
-          <article class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              data-title="Studio identity"
-              data-medium="Brand design, 2024"
-            >
-              <img
-                src="images/img_7029.jpg"
-                alt="Minimal brand mockup with serif typography on cream paper"
-                width="600"
-                height="500"
-                loading="lazy"
-              />
-            </button>
-            <div class="gallery-caption">
-              <h3>Studio identity</h3>
-              <span>Brand design</span>
+          <a class="polaroid polaroid-card" href="blogs.html" id="writings">
+            <div class="polaroid-frame">
+              <div class="polaroid-photo">
+                <img
+                  src="images/blogs-writings.jpg"
+                  alt="Open notebook on desk with laptop and pen"
+                  width="240"
+                  height="320"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </article>
-
-          <article class="gallery-item gallery-item--wide">
-            <button
-              class="gallery-trigger"
-              type="button"
-              data-title="Coastal series"
-              data-medium="Acrylic, 2025"
-            >
-              <img
-                src="images/img_7029.jpg"
-                alt="Wide landscape painting of sea and horizon in muted greens"
-                width="900"
-                height="500"
-                loading="lazy"
-              />
-            </button>
-            <div class="gallery-caption">
-              <h3>Coastal series</h3>
-              <span>Acrylic</span>
-            </div>
-          </article>
-
-          <article class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              data-title="Editorial spread"
-              data-medium="Digital collage, 2024"
-            >
-              <img
-                src="images/img_7029.jpg"
-                alt="Editorial collage with figure and geometric shapes"
-                width="600"
-                height="500"
-                loading="lazy"
-              />
-            </button>
-            <div class="gallery-caption">
-              <h3>Editorial spread</h3>
-              <span>Digital collage</span>
-            </div>
-          </article>
-
-          <article class="gallery-item gallery-item--tall">
-            <button
-              class="gallery-trigger"
-              type="button"
-              data-title="Ceramic forms"
-              data-medium="Photography, 2023"
-            >
-              <img
-                src="images/img_7029.jpg"
-                alt="Still life photograph of handmade ceramic vessels"
-                width="600"
-                height="800"
-                loading="lazy"
-              />
-            </button>
-            <div class="gallery-caption">
-              <h3>Ceramic forms</h3>
-              <span>Photography</span>
-            </div>
-          </article>
+            <p class="polaroid-label">blogs | writings</p>
+          </a>
         </div>
       </section>
     </main>
@@ -318,7 +237,7 @@
     <footer class="site-footer">
       <p>© <span id="year"></span> Hawwa 'bint Shamsuddeen. All rights reserved.</p>
       <a
-        href="https://www.instagram.com/hawwabintshamsuddeen/"
+        href="https://www.instagram.com/hawwabintshamsuddeen_/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"

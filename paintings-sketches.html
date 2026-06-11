@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        if (location.pathname.startsWith("/portfolio")) {
+          var base = document.createElement("base");
+          base.href = "/portfolio/";
+          document.head.appendChild(base);
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Paintings and sketches by Hawwa 'bint Shamsuddeen — oil, watercolor, ink, and pencil work."
+    />
+    <title>Paintings & Sketches — Hawwa 'bint Shamsuddeen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo logo--static" href="index.html">Hawwa&nbsp;'bint&nbsp;Shamsuddeen</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#work">Work</a>
+      </nav>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open menu"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <nav id="mobile-nav" class="mobile-nav" hidden aria-label="Mobile">
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#work">Work</a>
+    </nav>
+
+    <main class="category-page">
+      <div class="category-page-inner">
+        <a class="back-link" href="index.html#work">← Back to My work</a>
+
+        <header class="category-header">
+          <h1>Paintings &amp; sketches</h1>
+          <p>
+            Oil, watercolor, ink, and pencil work — from canvas paintings to
+            architectural sketches and journal illustrations.
+          </p>
+        </header>
+
+        <div class="project-gallery">
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="New York skyline"
+              data-medium="Acrylic on canvas"
+            >
+              <img
+                src="images/paintings/new-york-skyline.png"
+                alt="Minimalist New York City skyline line drawing on black and white canvas"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>New York skyline</h3>
+              <span>Acrylic on canvas</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Shallow views, deep truths"
+              data-medium="Acrylic on canvas"
+            >
+              <img
+                src="images/paintings/shallow-views-deep-truths.png"
+                alt="Geometric iceberg painting with shallow views and deep truths text"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Shallow views, deep truths</h3>
+              <span>Acrylic on canvas</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Night street lamp"
+              data-medium="Acrylic"
+            >
+              <img
+                src="images/paintings/night-street-lamp.png"
+                alt="Night scene with glowing street lamp and tree silhouettes"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Night street lamp</h3>
+              <span>Acrylic</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Floral canvas"
+              data-medium="Acrylic on canvas"
+            >
+              <img
+                src="images/paintings/floral-canvas-painting.png"
+                alt="Minimal floral line art on canvas with peach and pink shapes"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Floral canvas</h3>
+              <span>Acrylic on canvas</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Abstract acrylic"
+              data-medium="Acrylic on canvas"
+            >
+              <img
+                src="images/paintings/abstract-acrylic.png"
+                alt="Abstract acrylic painting"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Abstract acrylic</h3>
+              <span>Acrylic on canvas</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Message in a bottle"
+              data-medium="Ink sketch"
+            >
+              <img
+                src="images/paintings/message-in-bottle.png"
+                alt="Paper boat in a bottle ink drawing with Lost and Lifeless text"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Message in a bottle</h3>
+              <span>Ink sketch</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Earth"
+              data-medium="Acrylic on canvas"
+            >
+              <img
+                src="images/paintings/earth-acrylic.png"
+                alt="Acrylic painting of the Earth"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Earth</h3>
+              <span>Acrylic on canvas</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Architectural sketch"
+              data-medium="Ink & watercolor"
+            >
+              <img
+                src="images/paintings/architectural-sketch.png"
+                alt="Architectural building sketch"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Architectural sketch</h3>
+              <span>Ink & watercolor</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Big Ben, London"
+              data-medium="Ink sketch"
+            >
+              <img
+                src="images/paintings/big-ben-london.png"
+                alt="Elizabeth Tower architectural sketch in blue ink"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Big Ben, London</h3>
+              <span>Ink sketch</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Human heart"
+              data-medium="Ink sketch"
+            >
+              <img
+                src="images/paintings/human-heart-doodle.png"
+                alt="Anatomical heart with flowers ink drawing"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Human heart</h3>
+              <span>Ink sketch</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Floral embroidery"
+              data-medium="Embroidery on canvas"
+            >
+              <img
+                src="images/paintings/floral-embroidery-canvas.png"
+                alt="Floral line art with embroidery on painted canvas"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Floral embroidery</h3>
+              <span>Embroidery on canvas</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="M ♥ M"
+              data-medium="Embroidery & acrylic"
+            >
+              <img
+                src="images/paintings/m-heart-m-canvas.png"
+                alt="Initials canvas with floral embroidery and glitter accents"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>M ♥ M</h3>
+              <span>Embroidery & acrylic</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Heart embroidery"
+              data-medium="Embroidery on wood"
+            >
+              <img
+                src="images/paintings/heart-embroidery.png"
+                alt="Heart-shaped embroidery with wave detail"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Heart embroidery</h3>
+              <span>Embroidery on wood</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Hasselt, Belgium"
+              data-medium="Ink & watercolor"
+            >
+              <img
+                src="images/paintings/hasselt-belgium.png"
+                alt="Church architectural sketch in Hasselt, Belgium"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Hasselt, Belgium</h3>
+              <span>Ink & watercolor</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="No shelf control"
+              data-medium="Ink & color wash"
+            >
+              <img
+                src="images/paintings/no-shelf-control.png"
+                alt="Bookshelf illustration with no shelf control lettering"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>No shelf control</h3>
+              <span>Ink & color wash</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Ocean"
+              data-medium="Acrylic on canvas"
+            >
+              <img
+                src="images/paintings/ocean-canvas.png"
+                alt="Minimalist ocean painting with seashells on canvas"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Ocean</h3>
+              <span>Acrylic on canvas</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="La Sorbonne"
+              data-medium="Ink sketch"
+            >
+              <img
+                src="images/paintings/sorbonne-sketch.png"
+                alt="Chapelle de la Sorbonne architectural ink drawing"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>La Sorbonne</h3>
+              <span>Ink sketch</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Euphoria"
+              data-medium="Ink sketch"
+            >
+              <img
+                src="images/paintings/euphoria-rain.png"
+                alt="Euphoria street sign with mushrooms in the rain"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Euphoria</h3>
+              <span>Ink sketch</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Chapter 17"
+              data-medium="Mixed media journal"
+            >
+              <img
+                src="images/paintings/chapter-17-reading-nook.png"
+                alt="Cozy reading nook illustration for chapter 17"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Chapter 17</h3>
+              <span>Mixed media journal</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="You got this"
+              data-medium="Ink sketch"
+            >
+              <img
+                src="images/paintings/you-got-this.png"
+                alt="Mandala and arrow doodle with you got this lettering"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>You got this</h3>
+              <span>Ink sketch</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="The Zetter Townhouse"
+              data-medium="Watercolor & ink"
+            >
+              <img
+                src="images/paintings/zetter-townhouse.png"
+                alt="London townhouse entrance watercolor sketch"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>The Zetter Townhouse</h3>
+              <span>Watercolor & ink</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Op art pattern"
+              data-medium="Acrylic on canvas"
+            >
+              <img
+                src="images/paintings/op-art-pattern.png"
+                alt="Geometric op art painting with black, white, and color accents"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Op art pattern</h3>
+              <span>Acrylic on canvas</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Circular seascape"
+              data-medium="Oil on canvas"
+            >
+              <img
+                src="images/paintings/circular-seascape.png"
+                alt="Minimalist circular canvas seascape"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Circular seascape</h3>
+              <span>Oil on canvas</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-title="Skeletal hands"
+              data-medium="Acrylic on canvas"
+            >
+              <img
+                src="images/paintings/skeletal-hands.png"
+                alt="Skeletal hands painting on black canvas"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </button>
+            <div class="gallery-caption">
+              <h3>Skeletal hands</h3>
+              <span>Acrylic on canvas</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Hawwa 'bint Shamsuddeen. All rights reserved.</p>
+      <a
+        href="https://www.instagram.com/hawwabintshamsuddeen_/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+      >
+        <svg
+          class="icon"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+        </svg>
+      </a>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <figure class="lightbox-figure">
+        <img src="" alt="" id="lightbox-img" />
+        <figcaption>
+          <h3 id="lightbox-title"></h3>
+          <p id="lightbox-medium"></p>
+        </figcaption>
+      </figure>
+    </dialog>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -17,6 +17,7 @@
   --font-body: "Outfit", system-ui, sans-serif;
   --max-width: 1200px;
   --header-height: 72px;
+  --polaroid-beige: #dcc9a8;
 }
 
 html {
@@ -68,17 +69,33 @@ code {
 }
 
 .logo {
+  --logo-progress: 0;
+  position: absolute;
+  left: clamp(1.25rem, 4vw, 3rem);
+  display: block;
+  opacity: var(--logo-progress);
+  filter: blur(calc((1 - var(--logo-progress)) * 8px));
+  pointer-events: none;
   font-family: var(--font-display);
-  font-size: clamp(1rem, 2.8vw, 1.5rem);
+  font-size: clamp(0.8rem, 2vw, 1.05rem);
   font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  max-width: min(14rem, 55vw);
+  white-space: nowrap;
+  will-change: opacity, filter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo {
+    filter: none;
+    will-change: opacity;
+  }
 }
 
 .nav {
   display: flex;
   gap: 2rem;
+  margin-left: auto;
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -119,6 +136,7 @@ code {
   gap: 6px;
   width: 40px;
   height: 40px;
+  margin-left: auto;
   padding: 0;
   border: none;
   background: transparent;
@@ -158,7 +176,7 @@ code {
 .hero {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: clamp(4rem, 12vw, 8rem) clamp(1.25rem, 4vw, 3rem)
+  padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 4vw, 3rem)
     clamp(3rem, 8vw, 5rem);
 }
 
@@ -172,12 +190,14 @@ code {
 }
 
 .hero h1 {
-  margin: 0 0 1.5rem;
+  margin: 0 0 clamp(4.5rem, 12vw, 7rem);
   font-family: var(--font-display);
-  font-size: clamp(2.75rem, 8vw, 5rem);
+  font-size: clamp(2.25rem, 6.5vw, 4rem);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--accent);
 }
 
 .hero-text {
@@ -237,8 +257,13 @@ code {
 /* Gallery */
 
 .gallery-section {
-  padding: clamp(3rem, 8vw, 5rem) clamp(1.25rem, 4vw, 3rem);
+  padding: clamp(2rem, 5vw, 3rem) clamp(1.25rem, 4vw, 3rem);
   background: var(--bg-alt);
+}
+
+.gallery-section--polaroids {
+  background: color-mix(in srgb, var(--bg) 72%, black);
+  padding: clamp(3rem, 8vw, 5.5rem) clamp(1.5rem, 5vw, 4rem);
 }
 
 .section-header {
@@ -253,11 +278,261 @@ code {
   font-weight: 400;
 }
 
-.section-header p {
+.section-header--compact {
+  margin-bottom: 1.25rem;
+}
+
+.section-header--compact h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+.gallery-section--polaroids .section-header--compact {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.gallery-section--polaroids .section-header--compact h2 {
+  color: var(--text);
+}
+
+.gallery-section--polaroids .section-header p {
+  margin: 0 auto;
+  max-width: 42ch;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* Polaroid row */
+
+.polaroids {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(2.5rem, 8vw, 6rem);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 2rem 2rem;
+}
+
+.polaroid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 clamp(14rem, 22vw, 20rem);
+  max-width: 20rem;
+  transform: none;
+}
+
+.polaroid-frame {
+  width: 100%;
+  padding: 0.35rem;
+  background-color: var(--polaroid-beige);
+  opacity: 1;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.55);
+  transform: none;
+}
+
+.polaroid-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  padding: 0;
+  border: none;
+  background: #111;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.polaroid-photo--link {
+  cursor: pointer;
+}
+
+.polaroid-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: none;
+  transition: transform 0.35s ease;
+}
+
+.polaroid-photo:hover img,
+.polaroid-photo:focus-visible img {
+  transform: scale(1.04);
+}
+
+.polaroid-label {
+  width: 100%;
+  margin: 0.85rem 0 0;
+  min-height: 2.6em;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 300;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.polaroid-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.polaroid-card:hover,
+.polaroid-card:focus-visible {
+  transform: translateY(-4px);
+}
+
+.polaroid-card .polaroid-photo {
+  cursor: inherit;
+}
+
+.polaroid-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.logo--static {
+  --logo-progress: 1;
+  opacity: 1;
+  filter: none;
+  pointer-events: auto;
+}
+
+/* Category gallery pages */
+
+.category-page {
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 3rem)
+    clamp(4rem, 8vw, 6rem);
+  background: color-mix(in srgb, var(--bg) 72%, black);
+  min-height: calc(100vh - var(--header-height));
+}
+
+.category-page-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: color 0.2s;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--accent-hover);
+}
+
+.category-header {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.category-header h1 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+}
+
+.category-header p {
   margin: 0;
-  max-width: 50ch;
+  max-width: 55ch;
+  color: var(--text-muted);
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-card .gallery-trigger img {
+  aspect-ratio: 4 / 5;
+}
+
+.writing-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.writing-project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--bg);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.writing-project:hover,
+.writing-project:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.writing-project-thumb {
+  display: block;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.writing-project-thumb img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.writing-project:hover .writing-project-thumb img,
+.writing-project:focus-visible .writing-project-thumb img {
+  transform: scale(1.03);
+}
+
+.writing-project-meta {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.writing-project h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.writing-project p {
+  margin: 0;
   font-size: 0.95rem;
   color: var(--text-muted);
+  line-height: 1.55;
 }
 
 .gallery {
@@ -315,7 +590,8 @@ code {
   transform: scale(1.03);
 }
 
-.gallery-caption h3 {
+.gallery-caption h3,
+.gallery-caption h4 {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.25rem;
@@ -353,8 +629,12 @@ code {
   object-fit: cover;
 }
 
+.personal-details {
+  --personal-section-gap: 3.75rem;
+}
+
 .personal-label {
-  margin: 0 0 2rem;
+  margin: 0 0 var(--personal-section-gap);
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.2em;
@@ -380,6 +660,10 @@ code {
 
 .personal-block {
   margin-bottom: 2.5rem;
+}
+
+.personal-block:not(:last-child) {
+  margin-bottom: var(--personal-section-gap);
 }
 
 .personal-block:last-child {
@@ -596,11 +880,29 @@ code {
     position: static;
     order: -1;
   }
+
+  .polaroids {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 1rem 0.5rem 1.5rem;
+  }
+
+  .polaroid {
+    flex: 0 1 16rem;
+    max-width: 16rem;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .polaroid-card:hover,
+  .polaroid-card:focus-visible {
+    transform: none;
   }
 
   .gallery-trigger img {

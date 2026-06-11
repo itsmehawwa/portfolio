@@ -4,17 +4,20 @@ A simple static portfolio site for showcasing artwork and linking to Instagram. 
 
 ## Quick start
 
-1. Run a local server (recommended — matches the live site layout):
+1. Run a local server (recommended):
 
    ```bash
-   python3 -m http.server 8000
+   cp .env.example .env   # first time only
+   bash scripts/dev.sh
    ```
 
-   Then visit [http://localhost:8000](http://localhost:8000).
+   This starts a server on port `8000` (from `.env`) and opens your browser. If that port is already in use, it opens the existing server instead.
+
+   **Do not** double-click `index.html` — use the local server or the live URL below.
 
    **Live site (GitHub Pages):** [https://itsmehawwa.github.io/portfolio/](https://itsmehawwa.github.io/portfolio/)
 
-   Opening `index.html` directly or previewing the file on github.com will not load styles the same way as localhost or Pages.
+   **Troubleshooting:** If the page won't load, run `bash scripts/dev.sh` again. If you see "Address already in use", either stop the old server (`lsof -i :8000` then `kill <PID>`) or change `PORT` in `.env`.
 
 2. **Customize content** in `index.html`:
    - Artist name, bio, and project titles
